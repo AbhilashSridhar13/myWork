@@ -1,5 +1,7 @@
 import type { ChartConfig } from "../types/chartMetrics.js";
 
+
+// having individual congig object for every value to display in the charts
 export const chartsConfig: ChartConfig[] = [
   {
     id: "cpu",

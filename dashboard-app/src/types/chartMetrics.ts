@@ -1,4 +1,4 @@
-export type MetricKey =
+export type keyMetrics =
   | 'cpu'
   | 'memory'
   | 'diskRead'
@@ -6,7 +6,7 @@ export type MetricKey =
   | 'ingress'
   | 'egress';
 
-  export interface MetricRecord {
+  export interface chartKeys {
   timestamp: number;
   cpu: number;
   memory: number;
@@ -19,8 +19,8 @@ export type MetricKey =
 export type ChartType = "line" | "area";
 
 export interface ChartSeriesConfig {
-  key: MetricKey;     // cpu, memory, diskRead, etc.
-  label: string;      // Display name
+  key: keyMetrics;
+  label: string;
   color: string;
 }
 

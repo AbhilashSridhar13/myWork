@@ -1,12 +1,12 @@
 
-import type { MetricRecord } from "../types/chartMetrics.js";
+import type { chartKeys } from "../types/chartMetrics.js";
 
 // function to generate rawdata for the charts to render
 export function generateMetricsData(
   count: number,
   // time span considered with 5s difference
   stepMs = 5000
-): MetricRecord[] {
+): chartKeys[] {
 
   // using the current timestamp and substracting the time span for time range slicing
   const startTime = Date.now() - count * stepMs;
